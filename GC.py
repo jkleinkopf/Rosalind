@@ -43,7 +43,7 @@ print str(data[index].splitlines()[0]) + "\n" + str(gc_cont[index]) + "%"
 	#prints new line.
 	#prints biggest gc_cont value and % symbol.
 	
-file.close()
+f.close()
 	
 
 
