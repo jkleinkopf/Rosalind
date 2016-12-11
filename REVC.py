@@ -4,15 +4,21 @@ s = "CAGACCAGAATGCCGAAATGTGGACGTTAAGAAAGCGAACCTAACATCTCGGTCAGAAAAAATACAAACGCGAGG
 
 rs = s[::-1] #reverses the sequence
 
-new = rs.replace("A","a") 
-new = new.replace("C", "c") 
-new = new.replace("G", "C")
-new = new.replace("T", "A")
-new = new.replace("a","T")
-new = new.replace("c", "G")
-	#can't replace A with T and T with A because then all A and T will be A.
-	#probably a more elegant way to do this problem
+print rs
+length=len(rs)
+
+reverse_complement = ""
+
+#iterate through reverse sequence and add complementary base to reverse_complement string
+for i in range(length): 
+	if rs[i] == "A":
+		reverse_complement += "T"
+	elif rs[i] == "T":
+		reverse_complement += "A"
+	elif rs[i] == "G":
+		reverse_complement += "C"
+	else:
+		reverse_complement += "G"
+		
+print reverse_complement
 	
-print s
-print "----" * 10
-print new
