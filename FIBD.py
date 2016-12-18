@@ -18,8 +18,8 @@ def RabbitCalculator(n, m):
 		#die after reaching rabbitAges[m-1]. 
 		rabbitAges = [sum(rabbitAges[1:])] + rabbitAges[:-1]
 		if i == (n-2):
-			print "Total # of rabbits at %d months is " % (i+2), sum(rabbitAges)
+			return sum(rabbitAges)
 
-RabbitCalculator(n, m)
+print RabbitCalculator(n, m)
 
-
+#n=95, m=19: total # rabbits after 19mo. is 31821707342501264751
