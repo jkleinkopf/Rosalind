@@ -5,7 +5,7 @@
 n=95
 m=19
 
-def RabbitAgeCalculator(n, m):
+def RabbitCalculator(n, m):
 	#create a list where each item is the number of rabbit pairs of a certain age in months.
 	#ie if rabbitAges[3] == 2, 2 pairs of rabbits are 4 months old. 
 	rabbitAges = [0] * m
@@ -20,6 +20,6 @@ def RabbitAgeCalculator(n, m):
 		if i == (n-2):
 			print "Total # of rabbits at %d months is " % (i+2), sum(rabbitAges)
 
-RabbitAgeCalculator(n, m)
+RabbitCalculator(n, m)
 
 
