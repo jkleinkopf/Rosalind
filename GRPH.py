@@ -12,18 +12,21 @@ fna = open(str(file), "r")
 names = []
 sequences = []
 
+#create list by splitting data at ">"s. Delete data[0] which is blank.
 data = fna.read().split(">")
 del(data[0])
 
+#append names of each sequences to names list, and sequences to sequences list.
 for i in range(len(data)):
 	names.append(data[i].splitlines()[0])
 	sequences.append("".join(data[i].splitlines()[1:]))
 
+#compare the last three nts of each sequence to the first three of each sequence. don't compare same sequences.
 for i in range(len(sequences)):
 	for i2 in range(len(sequences)):
 		if i == i2:
 			continue
-		elif sequences[i][-3:] == sequences[i2][:3]:
+		elif sequences[i][-3:] == sequences[i2][:3]: #if last three of one sequence equal the first three of another, print both names.
 			print names[i] + " " + names[i2]
 
 fna.close()
