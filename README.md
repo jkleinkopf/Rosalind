@@ -1,7 +1,7 @@
-# rosalind_practice
-My solutions to Rosalind bioinformatics problems.
+#Rosalind
+My solutions to Rosalind bioinformatics problems. http://rosalind.info. 
 
-http://rosalind.info
+
 
 
 
